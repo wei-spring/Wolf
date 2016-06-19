@@ -1,9 +1,7 @@
 package me.chunsheng.wolf;
 
-import android.animation.Animator;
-import android.animation.AnimatorListenerAdapter;
-import android.animation.ObjectAnimator;
 import android.app.Activity;
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Build;
 import android.os.Bundle;
@@ -20,6 +18,8 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+
+import me.chunsheng.wolf.hall.WolfHallActivity;
 
 public class LauncherActivity extends Activity {
 
@@ -58,6 +58,13 @@ public class LauncherActivity extends Activity {
         mVideoView = (VideoView) findViewById(R.id.videoView);
         mVideoView.setAlpha((float) 0.7);
         appName = (TextView) findViewById(R.id.appName);
+        appName.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(LauncherActivity.this, WolfHallActivity.class));
+                finish();
+            }
+        });
     }
 
 

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="8dip"
+    android:paddingTop="6dp">
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/level_1"
+        android:gravity="center"
+        android:text=" 遗忘之海: "
+        android:textColor="@color/color_blue_0888ff" />
+
+    <EditText
+        android:id="@+id/showEmojiText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_name"
+        android:layout_alignTop="@+id/tv_name"
+        android:layout_toRightOf="@id/tv_name"
+        android:background="@android:color/transparent"
+        android:clickable="false"
+        android:focusable="false"
+        android:maxLength="15"
+        android:textColor="@color/colorAccent"
+        android:textSize="14sp"></EditText>
+
+</RelativeLayout>
